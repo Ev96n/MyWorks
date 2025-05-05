@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Management System - Payment</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="logo-img">
+        <img src="lib.png" alt="logo" />
+      </div>
+      <div class="library-title">Library Management System</div>
+    </div>
+    <div class="main-content">
+      <div class="payment-box">
+        <nav class="nav" style="margin-bottom:20px;">
+          <a href="dashboard.html" class="nav-btn">Home</a>
+          <a href="search.html" class="nav-btn">Search</a>
+          <a href="payment.html" class="nav-btn active">Payment</a>
+          <a href="login.html" class="nav-btn">Logout</a>
+        </nav>
+        <h2>Payment Methods</h2>
+        <h3>Enter your payment details</h3>
+        <div class="payment-methods">
+          <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" />
+          <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="Mastercard" class="selected" />
+          <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover" />
+          <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex" />
+        </div>
+        <form class="payment-form" onsubmit="return validateForm()">
+          <label>Cardholder name</label>
+          <input type="text" name="cardholder" required />
+          <label>Card Number</label>
+          <input type="text" name="cardnumber" placeholder="1234 5678 9012 3456" required
+            pattern="\d{4} \d{4} \d{4} \d{4}" />
+          <div class="payment-row">
+            <div>
+              <label>Exp Month</label>
+              <select name="expMonth" required>
+                <option value="">Month</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+            </div>
+            <div>
+              <label>Exp Year</label>
+              <select name="expYear" required>
+                <option value="">Year</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+              </select>
+            </div>
+          </div>
+          <label>CVC</label>
+          <input type="text" name="cvc" placeholder="123" required pattern="\d{3,4}" />
+          <div class="cvc-hint">
+            3 or 4 digits usually found on the signature strip
+          </div>
+          <div class="set-default">
+            <input type="checkbox" id="setDefault" />
+            <label for="setDefault">Set as default</label>
+          </div>
+          <button class="pay-btn" type="submit">PAY</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

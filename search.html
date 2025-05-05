@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library Management System - Search</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="logo-img">
+        <img src="lib.png" alt="logo" />
+      </div>
+      <div class="library-title">Library Management System</div>
+    </div>
+    <div class="main-content">
+      <nav class="nav">
+        <a href="dashboard.html" class="nav-btn">Home</a>
+        <a href="search.html" class="nav-btn active">Search</a>
+        <a href="payment.html" class="nav-btn">Payment</a>
+        <a href="login.html" class="nav-btn">Logout</a>
+      </nav>
+      <div class="search-layout">
+        <aside class="filters-section">
+          <h3>Filters</h3>
+          <label><input type="checkbox" checked /> Book</label>
+          <label><input type="checkbox" /> Journal</label>
+          <label><input type="checkbox" checked /> Availability</label>
+          <button class="apply-filters-btn">Apply Filters</button>
+        </aside>
+        <section class="search-area">
+          <h2 class="search-title">Search Book</h2>
+          <div class="search-bar">
+            <input type="text" placeholder="Search Book" />
+            <button class="search-icon" title="Search">
+              <span role="img" aria-label="search">🔍</span>
+            </button>
+          </div>
+          <div class="search-results">
+            <div class="search-result">
+              <div>
+                <div class="result-title">Book Title</div>
+                <div class="result-author">Author Name</div>
+              </div>
+              <button class="barrow-btn">Barrow</button>
+            </div>
+            <div class="search-result">
+              <div>
+                <div class="result-title">Book Title</div>
+                <div class="result-author">Author Name</div>
+              </div>
+              <button class="barrow-btn">Barrow</button>
+            </div>
+            <div class="search-result">
+              <div>
+                <div class="result-title">Book Title</div>
+                <div class="result-author">Author Name</div>
+              </div>
+              <button class="barrow-btn">Barrow</button>
+            </div>
+            <div class="search-result">
+              <div>
+                <div class="result-title">Book Title</div>
+                <div class="result-author">Author Name</div>
+              </div>
+              <button class="barrow-btn">Barrow</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
